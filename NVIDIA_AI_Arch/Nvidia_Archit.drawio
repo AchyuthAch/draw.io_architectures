@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="1yMEFNZ5YV2D6K37W4MS">
+    <mxGraphModel dx="1858" dy="1025" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#172033;" value="AI Inference Platform Architecture" vertex="1">
+          <mxGeometry height="40" width="550" x="310" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="users" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f1ff;strokeColor=#4d7cfe;strokeWidth=2;fontStyle=1;fontColor=#17326b;" value="USERS" vertex="1">
+          <mxGeometry height="52" width="240" x="465" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9f8f0;strokeColor=#2e9d68;strokeWidth=2;fontStyle=1;fontColor=#165a3c;" value="API Gateway" vertex="1">
+          <mxGeometry height="52" width="240" x="465" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff4dc;strokeColor=#d89422;strokeWidth=2;fontStyle=1;fontColor=#754b08;" value="Authentication / RBAC" vertex="1">
+          <mxGeometry height="52" width="240" x="465" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="aigateway" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f4eaff;strokeColor=#9561c9;strokeWidth=2;fontStyle=1;fontColor=#58337e;" value="AI Gateway" vertex="1">
+          <mxGeometry height="52" width="240" x="465" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="eks" parent="1" style="swimlane;horizontal=0;rounded=1;whiteSpace=wrap;html=1;fillColor=#f7f9fc;strokeColor=#516174;strokeWidth=2;fontStyle=1;fontColor=#263548;startSize=34;container=1;collapsible=0;" value="Kubernetes / EKS" vertex="1">
+          <mxGeometry height="365" width="680" x="245" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="nim1" parent="eks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9f3ff;strokeColor=#3785c7;strokeWidth=2;fontStyle=1;fontColor=#174b78;" value="NIM-1" vertex="1">
+          <mxGeometry height="52" width="250" x="55" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="nim2" parent="eks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9f3ff;strokeColor=#3785c7;strokeWidth=2;fontStyle=1;fontColor=#174b78;" value="NIM-2" vertex="1">
+          <mxGeometry height="52" width="250" x="375" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="node1" parent="eks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef7f2;strokeColor=#39a56d;strokeWidth=2;fontStyle=1;fontColor=#1d6341;" value="GPU Node" vertex="1">
+          <mxGeometry height="52" width="250" x="55" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="node2" parent="eks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef7f2;strokeColor=#39a56d;strokeWidth=2;fontStyle=1;fontColor=#1d6341;" value="GPU Node" vertex="1">
+          <mxGeometry height="52" width="250" x="375" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="operator1" parent="eks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff6e5;strokeColor=#d89b29;strokeWidth=2;fontStyle=1;fontColor=#78500e;" value="GPU Operator" vertex="1">
+          <mxGeometry height="52" width="250" x="55" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="operator2" parent="eks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff6e5;strokeColor=#d89b29;strokeWidth=2;fontStyle=1;fontColor=#78500e;" value="GPU Operator" vertex="1">
+          <mxGeometry height="52" width="250" x="375" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="gpu1" parent="eks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3edff;strokeColor=#9065ca;strokeWidth=2;fontStyle=1;fontColor=#58377d;" value="NVIDIA GPU" vertex="1">
+          <mxGeometry height="52" width="250" x="55" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="gpu2" parent="eks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3edff;strokeColor=#9065ca;strokeWidth=2;fontStyle=1;fontColor=#58377d;" value="NVIDIA GPU" vertex="1">
+          <mxGeometry height="52" width="250" x="375" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="eks" source="nim1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#566579;endArrow=block;" target="node1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="eks" source="nim2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#566579;endArrow=block;" target="node2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="eks" source="node1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#566579;endArrow=block;" target="operator1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="eks" source="node2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#566579;endArrow=block;" target="operator2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="eks" source="operator1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#566579;endArrow=block;" target="gpu1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="eks" source="operator2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#566579;endArrow=block;" target="gpu2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dcgm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff0f0;strokeColor=#d65b66;strokeWidth=2;fontStyle=1;fontColor=#7f252f;" value="DCGM Metrics" vertex="1">
+          <mxGeometry height="52" width="240" x="465" y="815" as="geometry" />
+        </mxCell>
+        <mxCell id="observability" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff0f0;strokeColor=#d65b66;strokeWidth=2;fontStyle=1;fontColor=#7f252f;" value="Prometheus / Grafana" vertex="1">
+          <mxGeometry height="52" width="240" x="465" y="895" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="users" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#566579;endArrow=block;" target="api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#566579;endArrow=block;" target="auth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="auth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#566579;endArrow=block;" target="aigateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="aigateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#566579;endArrow=block;" target="eks">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="eks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#566579;endArrow=block;" target="dcgm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="dcgm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#566579;endArrow=block;" target="observability">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
